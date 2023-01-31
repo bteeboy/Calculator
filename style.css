@@ -54,6 +54,13 @@ button {
 .span-two {
     grid-column: span 2;
     background-color: #28AFB0;
+    color: #000;
+}
+
+button:hover,
+button:active {
+    background-color: #28AFB0; color: #000; 
+    transition: background-color 0.3s ease-in, color 0.3s ease-in;
 }
 
 
