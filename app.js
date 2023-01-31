@@ -12,32 +12,32 @@ let equation = ''
 // Making the current 
 addDigit = function() {
     // send digit from the button html to current feild
-    current.innerHTML = this.innerHTML
+    current.innerText = this.innerText
     // add the digit to the larger number you're creating
-    enterNumber += this.innerHTML
-    current.innerHTML = enterNumber
+    enterNumber += this.innerText
+    current.innerText = enterNumber
   } 
 deleteDigit = function() {
     //if there is content, remove the last digit added to the bottom of the calculator(enterNumber)
     if (enterNumber.length !== 0) {
         enterNumber = enterNumber.slice(0, -1)  
     }
-    current.innerHTML = enterNumber
+    current.innerText = enterNumber
 }
 addMath = function() {
     // add the math operator and send the larger number created by addDigit to 
     // the equation(previous) on the top of the calculator and clear the bottom
     equation += enterNumber
-    equation += this.innerHTML
-    previous.innerHTML = equation
+    equation += this.innerText
+    previous.innerText = equation
     enterNumber = ''
 }
 doMath = function() {
     // add the last digit to the equation then evaluate the equation and display the result on the bottom 
     equation += enterNumber
     output = eval(equation)
-    previous.innerHTML = equation
-    current.innerHTML = output
+    previous.innerText = equation
+    current.innerText = output
     //make the buttons not clickable until you clear
     for (let index = 0; index < number.length; index++) {
         number[index].disabled = true
@@ -51,8 +51,8 @@ doMath = function() {
 
 erase = function() {
     // clear the bottom(current) and the top (previous) of the calculator as well as the variables holding the math 
-    previous.innerHTML = ''
-    current.innerHTML = ''
+    previous.innerText = ''
+    current.innerText = ''
     enterNumber = ''
     equation = ''
     //make the buttons clickable again
