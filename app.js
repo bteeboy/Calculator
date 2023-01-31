@@ -34,11 +34,11 @@ addMath = function() {
 }
 doMath = function() {
     // add the last digit to the equation then evaluate the equation and display the result on the bottom 
-    //then make the buttons not clickable until you clear
     equation += enterNumber
     output = eval(equation)
     previous.innerHTML = equation
     current.innerHTML = output
+    //make the buttons not clickable until you clear
     for (let index = 0; index < number.length; index++) {
         number[index].disabled = true
     }
